@@ -1,6 +1,6 @@
 # YouTube Data Collection for Weight Stigma Research
 
-This repository contains the data collection pipeline for a research study investigating weight stigma in Brazilian YouTube content. The project uses the YouTube Data API v3 to systematically collect and analyze video metadata and user comments.
+This repository contains the data collection pipeline for a research study investigating weight stigma in Brazilian YouTube content. The project uses the YouTube Data API v3 to collect and analyze video metadata and user comments.
 
 ## Overview
 
@@ -23,7 +23,7 @@ The research aims to understand patterns of weight stigma in social media by:
 
 ### Prerequisites
 
-- Python 3.8 or higher
+- Python 3.12 or higher
 - YouTube Data API v3 key(s)
 - Sufficient API quota for your research scope
 
@@ -77,26 +77,6 @@ Modify the `Config` class in the notebook to customize:
 - File paths
 - API limits
 
-### Example Usage
-
-```python
-# Basic data collection
-comments_df, metadata = collect_youtube_data(
-    keywords=["obesidade", "gordo", "gorda"],
-    api_keys=[os.getenv('YOUTUBE_API_KEY_1')],
-    output_prefix="my_study"
-)
-
-# Explore collected data
-explore_collected_data(comments_df)
-
-# Export for publication
-export_for_publication(
-    comments_df, 
-    filename_prefix="weight_stigma_dataset",
-    anonymize=True
-)
-```
 
 ## Data Structure
 
@@ -168,10 +148,6 @@ YouTube API v3 has daily quotas. Tips for efficient usage:
 3. **Empty Results**: Check if videos have comments enabled
 4. **Rate Limiting**: The pipeline handles this automatically
 
-### Logging
-
-Check the log file `youtube_data_collection.log` for detailed execution information.
-
 ## Contributing
 
 This is a research project. If you're using this code for your research:
@@ -193,7 +169,7 @@ If you use this code in your research, please cite:
 
 ## Contact
 
-For questions about this research project, please contact [your contact information].
+For questions about this research project, please contact elias.jacob@ufrn.br
 
 ## Acknowledgments
 
